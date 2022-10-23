@@ -1,38 +1,112 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu',
+  'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e6e8ec;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  text-align: centr;
 }
 
-.App-link {
-  color: #61dafb;
+.open-modal-btn {
+  background: #fff;
+  padding: 18px 25px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 0;
+  outline: none;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 23px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.open-modal-btn:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+} 
+
+.open-modal-btn:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
 }
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.modal {
+  background-color: #fff;
+  width: 70%;
+  max-width: 500px;
+  min-width: 400px;
+  max-height: 300px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease-in-out;
+}
+
+img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+svg {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 24px;
+  width: 24px;
+  opacity: 0,3;
+  cursor: pointer;
+}
+
+  svg:hover {
+    opacity: 1;
+  }
+  
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.modal {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50% -30%);
+  transition-delay: 0.2s;
+}
+
+.overlay.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay.show.modal {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50% -30%);
+}
+  
