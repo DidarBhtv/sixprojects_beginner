@@ -20,45 +20,45 @@ body {
   position: relative;
 }
 
-.App.result {
+.result {
   text-align: center;
-  }
+}
 
-.App.result button {
+  .result button {
   font-weight: bold;
   font-family: 'Nunuto', sans-serif;
   border-radius: 30px;
   border: 0;
   padding: 15px 30px;
   font-size: 20px;
-  background-color: darken(#ff006e, 3%);
-  color: #fff;
+  background-color: #ff006e;
+  color: rgb(8, 9, 8);
   margin-top: 20px;
   cursor: pointer;
     }
 
-.App.result h2 {
+ .result h2 {
   margin-bottom: 0;
     }
 
-.App.result img {
+ .result img {
   width: 150px;
     }
   
 
-.App.progress {
+.progress {
   height: 10px;
   border-radius: 30px;
-  background-color: rbg(232, 232, 232);
+  background-color: rgb(232, 232, 232);
   margin-bottom: 25px;
   }
-.App.progress__inner {
+.progress__inner {
   height: 100%;
   border-radius: 30px;
   width: 80%;
-  background: rbg(18, 231, 48);
+  background:rgb(18, 231, 48);
   transition: all 0,3s ease-in-out;
-  background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
     }
 
 .App.progress:before,
